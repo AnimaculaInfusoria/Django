@@ -9,8 +9,14 @@ from wagtail.search import index
 # Create your models here.
 
 
+
+class IndexPage(Page):
+    body = RichTextField()
+
+
 class BlogPage(Page):
     body = RichTextField()
+    
 
     # Editor panels configuration
 
