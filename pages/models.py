@@ -6,7 +6,7 @@ from wagtail.core.fields import RichTextField
 from wagtail.admin.edit_handlers import FieldPanel
 from wagtail.search import index
 
-# Create your models here.
+
 
 
 
@@ -18,7 +18,7 @@ class BlogPage(Page):
     body = RichTextField()
     
 
-    # Editor panels configuration
+    
 
     content_panels = Page.content_panels + [
         FieldPanel('body', classname="full")
@@ -26,4 +26,16 @@ class BlogPage(Page):
 
     search_fields = Page.search_fields + [
         index.SearchField('body')
-]
+    ]
+
+class ContactPage(Page):
+    body = RichTextField()
+
+
+class Contact(models.Model):
+    name = models.TextField()
+    email = models.EmailField()
+    message = models.TextField()
+
+    def __str__(self):
+        return self.email
