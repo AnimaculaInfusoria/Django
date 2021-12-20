@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load wagtailcore_tags %}
+{% load wagtailimages_tags %}
+{% block content %}
+<div class="body-overlay">
+    <form id="search-overlay-form" role="search" method="GET" autocomplete="off">
+      <input type="search" placeholder="Start your search here" name="q" value="">
+      <p>Press enter to search</p>
+      <span class="fa fa-times"></span>
+    </form>
+  </div>
+{% endblock content %}
