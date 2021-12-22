@@ -28,8 +28,7 @@ class BlogPage(Page):
         index.SearchField('body')
     ]
 
-class ContactPage(Page):
-    body = RichTextField()
+
 
 
 class Contact(models.Model):
