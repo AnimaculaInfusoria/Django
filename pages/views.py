@@ -2,6 +2,7 @@ from django.shortcuts import render
 from wagtail.search.models import Query
 from wagtail.core.models import Page
 from django.views.generic.edit import FormView
+from django.contrib import messages
 
 
 
